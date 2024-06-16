@@ -1,0 +1,15 @@
+{% load static %}
+{% include 'home/base/js.html' %}
+{% include 'home/base/css.html' %}
+
+<div class="my-5 pt-5 text-muted text-center text-small">
+
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="{% url 'home:about' %}">Sobre</a></li>
+        <!--li class="list-inline-item"><a href="#">Privacidade</a></li>
+        <li class="list-inline-item"><a href="#">Termos</a></li-->
+        <li class="list-inline-item"><a href="{% url 'home:contact' %}">Contato</a></li>
+    </ul>
+     <p class="mb-1">&copy; 2024 Kinquilharias R C M</p>
+    
+</div>

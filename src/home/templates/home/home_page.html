@@ -1,0 +1,33 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block base_head %}
+	{% include 'home/base/css.html' %}
+	<title>{{title}}</title>
+{% endblock base_head%}
+{% block content %}
+    <div class='text-center'>
+        <h1>{{ title }}</h1>
+             <p>{{ content }}</p>
+    </div>
+    <div class='container'>
+		<div class='row'>
+			<div class='col-md-6'>    
+				
+			<div class='col-md-6'> 
+				<figure >
+					<img src="{% static 'img/leandro_2.jpg' %}"style="width:350px; height:350px; margin-right:10px; "  >
+				</figure>    
+
+			</div>
+			<div class="col-md-4">
+				<H1>Novidade</H1>
+				<p class="card-text">vc ja teve cabelo !!!</p>
+			  
+			</div>    
+		</div>    
+	</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load static %}
+{% include 'home/base/css.html' %}
+{% url 'produto:list' as products_list_url %}
+{% url 'cliente:login' as login_url %}
+{% url 'cliente:logout' as logout_url %}
+{% url 'cliente:homecliente' as homecliente_url %}
+{% url 'home:home' as home_url %}
+{% url 'cart:home' as cart_url %}
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+
+        <div class="container col-mod-2">
+                <a class="p-2 text-black "  href="{{ home_url }}">
+                    <img title="Home" src="{% static 'img/logo_infinx.jpg' %}">
+                </a>
+        </div>
+        <div class=" container">
+            <div class="col-md-auto">
+                <nav class="my-2 my-md-0 mr-md-3 ">
+                   
+                    <a class="p-2 text-black  nav-item {% if request.path == login_url %} active {% endif %} " href="{% url 'home:about' %}">Sobre</a>
+                    <a class="p-2 text-black  nav-item {% if request.path == homeclienteurl %} active {% endif %} " href="{% url 'home:contact' %}">Contato</a>
+
+                  
+                </nav>
+            
+        </div>
+        </div>
+
+</div>
+

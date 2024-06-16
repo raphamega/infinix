@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+<!--   required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>{% include 'home/base/css.html' %}</style>
+    <title> Infinix - {{title}}</title>
+  </head>
+  <body>
+    <header>
+      {% include 'home/base/navbar.html'%}
+    </header>
+    <main>
+      {% block content %}
+
+      {% endblock %}
+    </main>
+     <footer>
+        {% include 'home/base/rodape.html' %}
+     </footer>
+    <scr>{% include 'home/base/js.html' %}</scr>
+  </body>
+ </html>

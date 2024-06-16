@@ -1,0 +1,68 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class='text-center'>
+        <h1>{{ title }}</h1>
+    </div>
+    {% spaceless %}{% endspaceless %}
+    <div class='container'>
+               
+                    
+            {% if form %}
+            <div class='row'>
+                <div class='col-md-6'>    
+                    <h3>{{ content }}</h3>
+                    <form method='POST'>
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <br>
+                        <div class="text-center">
+                            <button type='submit'  class=' btn btn-primary'> Enviar   </button>
+                        </div>
+                    </form>
+                </div>
+                <div class='col-md-6'> 
+                    <figure >
+                        <img src="{% static 'img/le_e Joao.jpg' %}"style="width:700px; height:700px; margin-right:10px; "  >
+                    </figure>    
+
+                </div>
+                </div>    
+            </div>    
+            {% else %}
+            <div class='row'>
+                <div class='text'>
+                <h3>{{ content }}</h3>
+            
+                <p>
+                    A Infinix Soluções Financeiras, empresa especializada exclusivamente no segmento de crédito consignado, vem por meio desta nota esclarecer sua atuação no mercado financeiro.
+                </p>
+                <p>     
+                    Somos uma empresa que atua como intermediadora bancária, oferecendo serviços de consultoria e assessoria para obtenção de crédito consignado junto às instituições financeiras parceiras. É importante ressaltar que em nenhuma circunstância cobramos ou recebemos quaisquer valores diretamente de nossos clientes.
+                </p>
+                <p>    
+                    É com grande preocupação que observamos casos de indivíduos mal intencionados utilizando o nome da Infinix Soluções Financeiras para perpetrar golpes de estelionato, prometendo investimentos com retornos altíssimos e fora do padrão do mercado financeiro legítimo. Ressaltamos que a Infinix Soluções Financeiras não oferece nenhum tipo de investimento e repudia veementemente tais práticas fraudulentas.
+                </p>    
+                <p>    
+                    Informamos ainda que a Infinix Soluções Financeiras é uma empresa constituída legalmente, com apenas dois sócios: João Vitor Evangelista da Silva e Leandro Soares Peixoto. Qualquer atividade realizada em nome da empresa que não seja devidamente autorizada por estes sócios deve ser tratada com suspeição e reportada imediatamente às autoridades competentes.
+                </p>
+                <p>    
+                    Reiteramos nosso compromisso com a transparência, integridade e ética em todas as nossas operações e estamos à disposição para quaisquer esclarecimentos adicionais.
+                </p>
+                <p>    
+                    Atenciosamente,
+                </p>    
+                <p>
+                    João Vitor Evangelista da Silva
+                    Leandro Soares Peixoto
+                </p>
+            </div>
+            {% endif %}
+            
+        
+            
+          
+    </div>
+{% endblock %}
